@@ -6,7 +6,7 @@
 
 
 
-export function CancelOrder(id: string | number){
+export function CancelOrder({idOrder}:{idOrder: (string | number)}){
   return(
     <div className="">
       Batalkan Pemesanan
