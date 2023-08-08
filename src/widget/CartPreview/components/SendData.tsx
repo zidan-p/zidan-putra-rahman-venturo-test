@@ -21,29 +21,15 @@ export function SendData(){
       nominal_diskon, nominal_pesanan, items
     })
 
-    const tesData = JSON.stringify({
-      "nominal_diskon": "50000",
-      "nominal_pesanan": "100000",
-      "items": [
-          { "id": 1, "harga": 10000, "catatan": "Tes" },
-          { "id": 2, "harga": 10000, "catatan": "Tes" },
-          { "id": 3, "harga": 10000, "catatan": "Tes" }
-      ]
-    })
-    console.log(sendData)
-    console.log(tesData);
-
     const result = await fetch("https://tes-mobile.landa.id/api/order", {
       body: sendData,
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json"},
       method: "POST"
     })
     const resJson = await result.json();
 
     if(resJson.status_code === 200){
-      toast(<OrderSuccess />)
+      toast(<OrderSuccess id={resJson.id} />)
     }
   }
   return(
