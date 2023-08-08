@@ -2,6 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Menu } from "../../entities/menu";
 import { Voucher } from "../../entities/voucher";
 import { CartGood } from "../../entities/cartGoods";
+import { log } from "console";
 
 const emptyMenu = {
   id    : 0,
@@ -54,6 +55,7 @@ export const cartSlice = createSlice({
       state.total = countTotalBundle(state.menuBundle)
     },
     resetCart: state => {
+      console.log("reset state")
       state = initialState;
     },
     removeMenu: (state, action: PayloadAction<Menu>) => {

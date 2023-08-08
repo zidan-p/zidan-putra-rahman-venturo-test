@@ -1,10 +1,12 @@
-import { useAppSelector } from "../../../app/hook"
+import { useAppDispatch, useAppSelector } from "../../../app/hook"
 import {toast} from "react-toastify";
 import { OrderSuccess } from "./toastLayout/OrderSuccess";
+import { resetCart } from "../../../feature/cart/slice";
 
 
 
 export function SendData(){
+  const dispatch = useAppDispatch();
   const cart = useAppSelector(state => state.cart);
   const sendCart = async () =>{
     const nominal_diskon = cart.discount.toString();
@@ -30,7 +32,9 @@ export function SendData(){
 
     if(resJson.status_code === 200){
       toast(<OrderSuccess id={resJson.id} />)
+      dispatch(resetCart())
     }
+
   }
   return(
     <button 
