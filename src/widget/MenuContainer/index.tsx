@@ -17,8 +17,8 @@ export function MenuContainer(){
   },[])
 
   return(
-  <div className="bg-white p-3 rounded">
-    <div className="grid grid-cols-3 gap-2">
+  <div className="p-3 rounded">
+    <div className="grid grid-cols-4 gap-2 max-w-5xl mx-auto">
       {menuList.map(men => (
         <MenuList menulist={men} />
       ))}

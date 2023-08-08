@@ -9,7 +9,7 @@ export function AddMenuToChart({menu}: {menu: Menu}){
   return(
   <button 
     onClick={()=>{dispatch(addMenu(menu))}}
-    className="bg-green-600 text-white px-4 py-1 hover:bg-green-700">
+    className="bg-green-600 text-white px-4 py-1 hover:bg-green-700 rounded-lg active:bg-green-800 active:outline">
     tambah ke keranjang
   </button>
   )

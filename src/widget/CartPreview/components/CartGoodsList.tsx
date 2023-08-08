@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "../../../app/hook";
 import { CartGood } from "../../../entities/cartGoods";
 import { RemoveMenufromCart } from "../../../feature/cart/component/RemoveMenuFromCart";
 import { changeNote } from "../../../feature/cart/slice";
-import { CounterGood } from "./Countergood";
+import { CounterGood } from "./counter/Countergood";
 
 
 

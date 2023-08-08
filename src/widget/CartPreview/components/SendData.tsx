@@ -1,6 +1,6 @@
 import { useAppSelector } from "../../../app/hook"
 import {toast} from "react-toastify";
-import { OrderSuccess } from "./OrderSuccess";
+import { OrderSuccess } from "./toastLayout/OrderSuccess";
 
 
 
