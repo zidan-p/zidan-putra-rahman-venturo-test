@@ -35,7 +35,7 @@ export function SendData(){
   return(
     <button 
       onClick={sendCart}
-    className="bg-green-600 px-3 rounded text-white">
+    className="bg-green-600 px-3 py-2 rounded text-white w-full">
       Pesan sekarang
     </button>
   )

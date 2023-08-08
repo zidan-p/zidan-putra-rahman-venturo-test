@@ -20,20 +20,7 @@ export function MainPage(){
         <OpenModal />
         <MenuContainer /> 
       </div>
-      <Modal
-        isOpen={isModalOpen}
-        shouldCloseOnOverlayClick={true}
-        contentLabel="Example Modal"
-        style={
-          {content:{
-            width: "600px",
-            marginLeft: "auto"
-          }}
-        }
-      >
-        <h1>Keranjang Pemesanan</h1>
-        <CartPreview />
-      </Modal>
+      <CartPreview />
     </div>
   )
 }

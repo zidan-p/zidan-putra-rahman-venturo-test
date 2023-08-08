@@ -29,8 +29,8 @@ export function VoucherInput(){
 
   return(
     <form onSubmit={checkVoucher} className="border shadow flex ">
-      <input onChange={(e) => setVoucherString(e.target.value)} type="text" className="basis-2/3" />
-      <button className="bg-green-300 basis-1/3">Check voucher</button>
+      <input onChange={(e) => setVoucherString(e.target.value)} type="text" className="basis-2/3 px-3" />
+      <button className="bg-green-300 py-2 basis-1/3">Check voucher</button>
     </form>
   )
 }

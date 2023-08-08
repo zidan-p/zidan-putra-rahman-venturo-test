@@ -44,6 +44,8 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addMenu: (state, action: PayloadAction<Menu>) => {
+      if(state.menuBundle.find(bundle => action.payload.id === bundle.menu.id) != undefined)
+        return;
       state.menuBundle.push({
         menu : action.payload,
         count: 1,
